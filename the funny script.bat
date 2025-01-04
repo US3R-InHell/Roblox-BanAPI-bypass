@@ -21,9 +21,10 @@ rem after you're banned from a game with banapi, press "enter" to start the proc
 :1 
 cls 
 echo. 
+echo Current Mac Address
 getmac
 echo.
-echo press any key to delete roblox, frfr.
+echo Press anykey to start
 echo.
 pause >nul
 goto 2
@@ -31,12 +32,9 @@ goto 2
 :2
 TASKKILL /F /IM RobloxPlayerBeta.exe >nul
 cls
-echo part 1
 del "C:\Users\%username%\AppData\Local\Roblox\*" /f /q /s >nul
 del "C:\Users\%username%\Appdata\Local\Temp\Roblox\" /f /q /s >nul
-cls
 del "C:\Users\%username%\AppData\Local\CrashDumps" /f /q /s >nul
-cls
 del "C:\Users\%username%\Pictures\Roblox\" /f /q /s >nul
 del "C:\Users\%username%\Desktop\Roblox*" /f /q /s >nul
 rem del "C:\Users\user\AppData\Local\Packages\Microsoft.Windows.Search_cw5n1h2txyewy\LocalState\AppIconCache\100\C__USERS_USER_APPDATA_LOCAL_ROBLOX_VERSIONS_VERSION-B71C150C7C1F40DE_ROBLOXPLAYERBETA_EXE" /f /q /s >nul
@@ -51,8 +49,9 @@ goto checkcuzamretard
 cls
 echo.
 echo There was an error. please makesure "RobloxPlayerInstaller" is in C:\Users\%username%\Downloads
-echo After you're done downloading, press any key to continue.
+echo Press anykey to continue (download roblox, press anykey again to finish)
 start "" https://www.roblox.com/download/client?os=win
+pause
 pause >nul
 goto ch3ck
 
@@ -73,8 +72,9 @@ goto msetup2p2
 :msetup2p1
 cls
 mkdir TMfunny
+cd /D TMfunny
 curl -O https://download.technitium.com/tmac/TMACv6.0.7_Setup.zip 
-move %cd%\TMACv6.0.7_Setup.zip %cd%\TMfunny\TMACv6.0.7_Setup.zip 
+cd ..
 goto msetup2
 
 :msetup2p2
@@ -92,10 +92,25 @@ if exist %cd%\TMfunny\tmac (
 )
 
 :basicallymacchanger1
+cls
 if exist %cd%\TMfunny\tmac\TMAC.exe (
  goto basicallymacchanger
 ) else (
- goto :basicallymacchanger1
+ cls
+ echo very funny error
+ msg * the file "TMAC.exe" from "%cd%\TMfunny\tmac\" is missing.
+ msg * do you know how it went missing?
+ msg * you little shit
+ timeout /t 15 >nul
+ start "" https://youtu.be/PbpT4olWNVM
+ start "" https://youtu.be/Nu09Y9KKWaQ
+ start "" https://youtu.be/YNT8hrIh33o
+ start "" https://youtu.be/EZjkHX70bVA
+ start "" https://youtu.be/hYnjTemz-NY
+ start "" https://youtu.be/ZZ5LpwO-An4
+ start "" https://youtu.be/JDw_roXqA5Y
+ start "" https://youtu.be/0wkRJnrCmAQ
+ EXIT /B
 )
 
 rem funny banapi bypass!!!1!! real (100% skidded)
@@ -107,14 +122,20 @@ rem I am not entirely sure how to fix but I am sure someone more far more compet
 cls
 timeout /t 1 >nul
 start "" %cd%\TMfunny\tmac\TMAC.EXE -n "Ethernet" -re -nr -s 
+timeout /t 1 
+tasklist /fi "windowtitle eq Technitium MAC*" /fo csv 2>nul | find /i "tmac.exe">nul
+if %ERRORLEVEL% equ 0 (
 goto aa
+) else (
+goto basicallymacchanger1
+)
 
 
 rem basically waits until "TMAC.exe" is closed, usually when you gain re connection, this also shows up after first setup
 :aa
 cls
-echo make sure tmac ran and installed, if its stuck here, ur fucked, retart script
-timeout /t 5 
+echo basically waiting for some reason
+timeout /t 3 >nul
 tasklist /fi "windowtitle eq Technitium MAC*" /fo csv 2>nul | find /i "tmac.exe">nul
 if %ERRORLEVEL% equ 0 (
 goto aa
@@ -125,9 +146,9 @@ goto ab
 
 rem this install boblox
 :ab
-timeout /t 5 >nul
+cls
+echo ok done frfr
 start /d  "C:\Users\%username%\Documents\" 1.exe
-timeout /t 5 >nul
 goto 222
 
 rem this does a funny, basically killing roblox after install and it opens
@@ -138,7 +159,8 @@ echo installing roblox...
 echo.
 TASKKILL /F /IM RobloxPlayerBeta.exe >nul
 if %ERRORLEVEL% equ 0 (
- TASKKILL /F /IM 1.exe
+TASKKILL /F /IM 1.exe >nul
+timeout /t 3 >nul
  goto end
 ) else (
  goto 222
@@ -150,7 +172,3 @@ echo.
 echo done!
 echo.
 goto 1
-
-rem MAKE SURE YOU USE A BROWSER TO CLEAR ALL HISTORY/DATA. use brave/librewolf and set all data to clear after closing 
-rem this may help prevent from certain games "knowing" its you, example: stateview prison
-rem to any actual developer that is experienced, I am sorry for what you see
