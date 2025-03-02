@@ -96,22 +96,26 @@ cls
 if exist %cd%\TMfunny\tmac\TMAC.exe (
  goto basicallymacchanger
 ) else (
- cls
- echo very funny error
- msg * the file "TMAC.exe" from "%cd%\TMfunny\tmac\" is missing.
- msg * do you know how it went missing?
- msg * you little shit
- timeout /t 15 >nul
- start "" https://youtu.be/PbpT4olWNVM
- start "" https://youtu.be/Nu09Y9KKWaQ
- start "" https://youtu.be/YNT8hrIh33o
- start "" https://youtu.be/EZjkHX70bVA
- start "" https://youtu.be/hYnjTemz-NY
- start "" https://youtu.be/ZZ5LpwO-An4
- start "" https://youtu.be/JDw_roXqA5Y
- start "" https://youtu.be/0wkRJnrCmAQ
- EXIT /B
+goto basicallymacchanger1
 )
+
+
+ rem this was supposed to be a funny little secret if you intentionally deleted the exe file, but it caused errors and i am too lazy to do it properly gn
+ rem cls
+ rem echo very funny error
+ rem msg * the file "TMAC.exe" from "%cd%\TMfunny\tmac\" is missing.
+ rem msg * do you know how it went missing?
+ rem msg * you little shit
+ rem timeout /t 15 >nul
+ rem start "" https://youtu.be/PbpT4olWNVM
+ rem start "" https://youtu.be/Nu09Y9KKWaQ
+ rem start "" https://youtu.be/YNT8hrIh33o
+ rem start "" https://youtu.be/EZjkHX70bVA
+ rem start "" https://youtu.be/hYnjTemz-NY
+ rem start "" https://youtu.be/ZZ5LpwO-An4
+ rem start "" https://youtu.be/JDw_roXqA5Y
+ rem start "" https://youtu.be/0wkRJnrCmAQ
+ rem EXIT /B
 
 rem funny banapi bypass!!!1!! real (100% skidded)
 rem tmac has cli feature, basically -re means  restart internet, -nr means non persistent random mac, and -s means silent 
